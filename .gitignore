@@ -1,6 +1,4 @@
-@"
 .env
 .env.*
 !.env.example
 node_modules/
-"@ | Out-File -Encoding utf8 .gitignore
