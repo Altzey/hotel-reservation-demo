@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grand Nusantara Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1>Grand Nusantara Hotel</h1>
+      <p class="tagline">Kenyamanan terbaik di setiap sudut kota</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Daftar Kamar ── -->
+    <section id="rooms-section">
+      <h2>Kamar Tersedia</h2>
+      <div id="rooms-status" class="status-msg" hidden></div>
+      <div id="rooms-grid" class="rooms-grid"></div>
+    </section>
+
+    <!-- ── Formulir Reservasi ── -->
+    <section id="booking-section">
+      <h2>Buat Reservasi</h2>
+      <form id="booking-form" novalidate>
+
+        <label for="guestName">Nama Tamu</label>
+        <input type="text" id="guestName" name="guestName" placeholder="Nama lengkap" required />
+
+        <label for="roomId">Pilih Kamar</label>
+        <select id="roomId" name="roomId" required>
+          <option value="">-- Pilih kamar --</option>
+        </select>
+
+        <div class="date-row">
+          <div>
+            <label for="checkIn">Check-in</label>
+            <input type="date" id="checkIn" name="checkIn" required />
+          </div>
+          <div>
+            <label for="checkOut">Check-out</label>
+            <input type="date" id="checkOut" name="checkOut" required />
+          </div>
+        </div>
+
+        <div id="price-estimate" class="price-estimate" hidden>
+          Estimasi: <strong id="price-value"></strong>
+        </div>
+
+        <button type="submit" id="submit-btn">Pesan Sekarang</button>
+
+        <div id="form-msg" class="form-msg" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Grand Nusantara Hotel. Demo Reservasi.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

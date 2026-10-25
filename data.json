@@ -1,0 +1,58 @@
+{
+  "rooms": [
+    {
+      "id": "room-1",
+      "name": "Deluxe Garden View",
+      "type": "Deluxe",
+      "pricePerNight": 750000,
+      "photoUrl": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600"
+    },
+    {
+      "id": "room-2",
+      "name": "Superior Ocean View",
+      "type": "Superior",
+      "pricePerNight": 1200000,
+      "photoUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600"
+    },
+    {
+      "id": "room-3",
+      "name": "Suite Executive",
+      "type": "Suite",
+      "pricePerNight": 2500000,
+      "photoUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600"
+    },
+    {
+      "id": "room-4",
+      "name": "Standard City View",
+      "type": "Standard",
+      "pricePerNight": 450000,
+      "photoUrl": "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?w=600"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "res-1792912747975",
+      "roomId": "room-1",
+      "guestName": "Budi Santoso",
+      "checkIn": "2025-08-01",
+      "checkOut": "2025-08-04",
+      "totalPrice": 2250000
+    },
+    {
+      "id": "res-1792912819178",
+      "roomId": "room-2",
+      "guestName": "Siti Rahayu",
+      "checkIn": "2025-09-10",
+      "checkOut": "2025-09-13",
+      "totalPrice": 3600000
+    },
+    {
+      "id": "res-1792913057423",
+      "roomId": "room-3",
+      "guestName": "Altz",
+      "checkIn": "2026-10-25",
+      "checkOut": "2026-10-27",
+      "totalPrice": 5000000
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background: #f4f5f7;
+  color: #1f2328;
+}
+
+/* ── Header ── */
+header {
+  background: #1a3c5e;
+  color: #fff;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+header h1 { font-size: 2rem; letter-spacing: .04em; }
+.tagline { margin-top: .4rem; color: #a8c4e0; font-size: .95rem; }
+
+/* ── Main layout ── */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: .6rem;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1a3c5e;
+}
+
+/* ── Status / loading messages ── */
+.status-msg {
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  background: #f0f4ff;
+  color: #3b5bdb;
+  font-size: .9rem;
+}
+.status-msg.error { background: #fff0f0; color: #c0392b; }
+
+/* ── Rooms grid ── */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.room-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow .15s, border-color .15s;
+}
+.room-card:hover,
+.room-card.selected {
+  border-color: #1a3c5e;
+  box-shadow: 0 0 0 2px #1a3c5e22;
+}
+.room-card.selected { background: #f0f5ff; }
+
+.room-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+.room-card-body { padding: .75rem; }
+.room-card-name { font-weight: 600; font-size: .95rem; }
+.room-card-type {
+  font-size: .78rem;
+  color: #57606a;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top: .15rem;
+}
+.room-card-price {
+  margin-top: .5rem;
+  font-size: .9rem;
+  color: #1a3c5e;
+  font-weight: 600;
+}
+
+/* ── Booking form ── */
+#booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+
+label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #57606a;
+  display: block;
+  margin-bottom: .25rem;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: .55rem .75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: .95rem;
+  background: #fff;
+  color: #1f2328;
+  transition: border-color .15s;
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: #1a3c5e;
+}
+
+.date-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.price-estimate {
+  background: #eef4ff;
+  border: 1px solid #c3d4f5;
+  border-radius: 6px;
+  padding: .6rem .9rem;
+  font-size: .9rem;
+  color: #1a3c5e;
+}
+
+button[type="submit"] {
+  padding: .7rem 1.5rem;
+  background: #1a3c5e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
+  align-self: flex-start;
+}
+button[type="submit"]:hover { background: #14304e; }
+button[type="submit"]:disabled { background: #7a99b5; cursor: not-allowed; }
+
+/* ── Form messages ── */
+.form-msg {
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  font-size: .9rem;
+}
+.form-msg.success { background: #edfdf5; color: #1a7a4a; border: 1px solid #a3e6c6; }
+.form-msg.error   { background: #fff0f0; color: #c0392b; border: 1px solid #f5a3a3; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: .82rem;
+  color: #8b9094;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.4rem; }
+  .date-row { grid-template-columns: 1fr; }
+  button[type="submit"] { width: 100%; }
+}
